@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#07090d" />
+    <meta
+      name="description"
+      content="Pakhoj helps you discover Pakistan's hidden places, valleys, lakes, and local gems through real people."
+    />
+    <title>Pakhoj — Discover Pakistan through real people</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="starfield" aria-hidden="true"></div>
+    <header class="site-header">
+      <a class="brand" href="#home" aria-label="Pakhoj home">
+        <img src="assets/pakhoj-logo.jpg" alt="" />
+        <span>PAKHOJ</span>
+      </a>
+      <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#app-preview">App preview</a>
+        <a href="#discover">Discover</a>
+        <a href="#stories">Stories</a>
+        <a href="#about">About</a>
+      </nav>
+      <a class="nav-cta" href="assets/pakhoj.apk" download="Pakhoj.apk">Download the app <span aria-hidden="true">↓</span></a>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="hero-content">
+          <div class="eyebrow"><span class="live-dot"></span> FIND YOUR PAKISTAN</div>
+          <h1>Pakistan is better<br /><span>discovered through</span><br />real people.</h1>
+          <p class="hero-description">
+            Find hidden places, peaceful valleys, beautiful lakes, and the stories that make Pakistan worth exploring.
+          </p>
+          <div class="hero-actions">
+            <a class="download-button" href="assets/pakhoj.apk" download="Pakhoj.apk">
+              <span class="android-mark" aria-hidden="true">↓</span>
+              <span><small>GET PAKHOJ FOR ANDROID</small><strong>Download the APK</strong></span>
+              <span class="button-arrow" aria-hidden="true">↗</span>
+            </a>
+          </div>
+          <div class="store-status"><span class="status-dot"></span> Currently working to publish on Google Play and the App Store</div>
+          <div class="download-note">Android APK <span>·</span> 32 MB <span>·</span> Direct download</div>
+        </div>
+        <div class="earth-wrap" aria-hidden="true">
+          <div class="earth-halo"></div>
+          <div class="earth">
+            <img src="https://images.unsplash.com/photo-1614730321146-b6fa6a46bcb4?auto=format&fit=crop&w=1400&q=85" alt="" />
+          </div>
+          <div class="earth-glow"></div>
+          <div class="orbit orbit-one"></div>
+          <div class="orbit orbit-two"></div>
+          <span class="orbit-label">PAKISTAN &nbsp; 30.3753° N · 69.3451° E</span>
+        </div>
+        <a class="scroll-cue" href="#app-preview"><span></span> SCROLL TO SEE THE APP</a>
+      </section>
+
+      <section class="app-showcase" id="app-preview" aria-label="Pakhoj app preview">
+        <div class="showcase-heading">
+          <div class="section-kicker">A FIRST LOOK INSIDE PAKHOJ</div>
+          <h2>Pakistan, in the palm<br />of <span>your hand.</span></h2>
+          <p>Scroll to take a little tour of the app.</p>
+        </div>
+        <div class="showcase-layout">
+          <div class="showcase-device-wrap">
+            <div class="showcase-phone" aria-label="Pakhoj app screen preview">
+              <div class="phone-screen">
+                <div class="phone-status"><span>9:41</span><span>●●● &nbsp; ▰</span></div>
+                <div class="phone-panels">
+                  <div class="phone-panel phone-welcome is-active" data-phone-screen="welcome">
+                    <img class="phone-logo" src="assets/pakhoj-logo.jpg" alt="Pakhoj" />
+                    <h3>Khush aamdeed <span aria-hidden="true">👋</span></h3>
+                    <p class="phone-subtitle">Pakistan ki khoj, apni nazar se</p>
+                    <div class="phone-tabs"><span class="phone-tab-active">Sign in</span><span>Create account</span></div>
+                    <div class="phone-input">Email</div>
+                    <div class="phone-input">Password</div>
+                    <div class="phone-submit">Sign in</div>
+                    <p class="phone-terms">By continuing you agree to Pakhoj’s terms &amp; privacy policy.</p>
+                  </div>
+                  <div class="phone-panel phone-discover" data-phone-screen="explore" aria-hidden="true">
+                    <div class="discover-search">⌕ <span>Search cities, places, users</span></div>
+                    <div class="discover-categories"><span class="discover-category-active">All</span><span>Lakes</span><span>Valleys</span><span>Treks</span><span>Food</span><span>Culture</span></div>
+                    <div class="discover-section-title"><span>↗</span> Trending places this week</div>
+                    <div class="trending-places">
+                      <article class="trending-place">
+                        <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&amp;fit=crop&amp;w=280&amp;h=360&amp;q=75" alt="" />
+                        <span><b>Attabad Lake</b><small>Hunza</small></span>
+                      </article>
+                      <article class="trending-place">
+                        <img src="https://images.unsplash.com/photo-1597074866923-dc0589150358?auto=format&amp;fit=crop&amp;w=280&amp;h=360&amp;q=75" alt="" />
+                        <span><b>Karimabad</b><small>Hunza</small></span>
+                      </article>
+                      <article class="trending-place">
+                        <img src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&amp;fit=crop&amp;w=280&amp;h=360&amp;q=75" alt="" />
+                        <span><b>Shangrila Resort</b><small>Skardu</small></span>
+                      </article>
+                    </div>
+                    <div class="discover-section-title gems-title"><span>♢</span> Hidden gems</div>
+                    <div class="gem-list">
+                      <article class="gem-card"><img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&amp;fit=crop&amp;w=110&amp;h=110&amp;q=70" alt="" /><span><b>Katpana Desert</b><small>⌖ Skardu, Gilgit-Baltistan</small></span></article>
+                      <article class="gem-card"><img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&amp;fit=crop&amp;w=110&amp;h=110&amp;q=70" alt="" /><span><b>Arang Kel</b><small>⌖ Neelum Valley, AJK</small></span></article>
+                      <article class="gem-card"><img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&amp;fit=crop&amp;w=110&amp;h=110&amp;q=70" alt="" /><span><b>Banjosa Lake</b><small>⌖ Rawalakot, AJK</small></span></article>
+                    </div>
+                    <div class="discover-section-title explore-more-title">Explore</div>
+                    <div class="discover-empty"><span>⊗</span><b>Find your next favourite</b><small>Search places or browse by category</small></div>
+                    <div class="discover-bottom-nav">
+                      <span><i>⌂</i><small>Home</small></span>
+                      <span class="discover-nav-active"><i>⊙</i><small>Discover</small></span>
+                      <span class="discover-add"><i>+</i></span>
+                      <span><i>◫</i><small>Map</small></span>
+                      <span><i>♙</i><small>Profile</small></span>
+                    </div>
+                  </div>
+                  <div class="phone-panel phone-new-post" data-phone-screen="new-post" aria-hidden="true">
+                    <div class="post-header"><b>New post</b><span>Publish</span></div>
+                    <div class="post-media-options">
+                      <div class="post-media-option"><span>▧<i>+</i></span><small>Photo / Reel</small></div>
+                      <div class="post-media-option"><span>▣</span><small>Camera</small></div>
+                    </div>
+                    <label class="post-field-label">Place</label>
+                    <div class="post-place-search">Search a place (e.g. Hunza)</div>
+                    <div class="post-location">⌖ &nbsp; Use my location</div>
+                    <label class="post-field-label post-category-label">Category</label>
+                    <div class="post-category-options"><span>Lakes</span><span class="post-selected-category">Valleys</span><span>Treks</span><span>Food</span><span>Cities</span></div>
+                    <label class="post-field-label post-caption-label">Caption</label>
+                    <div class="post-caption">Tell people about this place...</div>
+                    <div class="post-tips">
+                      <b>Good to know <small>(optional)</small></b>
+                      <div class="post-tip-input">Best time to visit (e.g. May – Sep)</div>
+                      <div class="post-travel-options"><span>Easy</span><span>Rough</span><span>4×4 needed</span></div>
+                      <div class="post-tip-input">Nearby hotel or food</div>
+                    </div>
+                    <div class="post-bottom-nav">
+                      <span><i>⌂</i><small>Home</small></span>
+                      <span><i>⊙</i><small>Discover</small></span>
+                      <span class="post-nav-add"><i>+</i></span>
+                      <span><i>◫</i><small>Map</small></span>
+                      <span><i>♙</i><small>Profile</small></span>
+                    </div>
+                  </div>
+                  <div class="phone-panel phone-feed" data-phone-screen="feed" aria-hidden="true">
+                    <div class="feed-appbar">
+                      <span class="feed-brand"><img src="assets/pakhoj-logo.jpg" alt="" /><b>Pakhoj</b></span>
+                      <span class="feed-actions"><i>✧</i><i>▢</i><i>☷</i><i>⚙</i></span>
+                    </div>
+                    <div class="feed-empty-card">
+                      <span class="feed-people-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M16 20v-1.6a3.3 3.3 0 0 0-3.3-3.3H6.3A3.3 3.3 0 0 0 3 18.4V20m9.5-14a3.25 3.25 0 1 1-6.5 0 3.25 3.25 0 0 1 6.5 0Zm4.5 3.2a3.2 3.2 0 0 1 0 6.2m4 6.6v-1.6a3.3 3.3 0 0 0-2.5-3.2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                      <b>Your feed is quiet</b>
+                      <p>Follow a few travellers to see their khoj here.</p>
+                      <span class="feed-discover-button">Discover people</span>
+                    </div>
+                    <div class="feed-bottom-nav">
+                      <span class="feed-nav-active"><i>⌂</i><small>Home</small></span>
+                      <span><i>⊙</i><small>Discover</small></span>
+                      <span class="feed-add"><i>+</i></span>
+                      <span><i>◫</i><small>Map</small></span>
+                      <span><i>♙</i><small>Profile</small></span>
+                    </div>
+                  </div>
+                  <div class="phone-panel phone-map" data-phone-screen="map" aria-hidden="true">
+                    <div class="map-category-chips"><span class="map-category-active">All</span><span>Lakes</span><span>Valleys</span><span>Treks</span><span>Food</span></div>
+                    <div class="real-map" id="pakhoj-map" role="img" aria-label="Map of Pakistan with places to explore"></div>
+                    <div class="map-loading" id="map-loading">Loading Pakistan map…</div>
+                    <div class="map-bottom-nav">
+                      <span><i>⌂</i><small>Home</small></span>
+                      <span><i>⊙</i><small>Discover</small></span>
+                      <span class="map-nav-add"><i>+</i></span>
+                      <span class="map-nav-active"><i>◫</i><small>Map</small></span>
+                      <span><i>♙</i><small>Profile</small></span>
+                    </div>
+                  </div>
+                  <div class="phone-panel phone-profile" data-phone-screen="profile" aria-hidden="true">
+                    <div class="profile-topline"><b>@areebqadir_11120</b><span><i>☷</i><i>⚙</i></span></div>
+                    <div class="profile-identity">
+                      <span class="profile-avatar"><img src="assets/pakhoj-logo.jpg" alt="Pakhoj profile" /></span>
+                      <b>areebqadir</b>
+                    </div>
+                    <div class="profile-stats">
+                      <span><b>0</b><small>Posts</small></span>
+                      <span><b>0</b><small>Places visited</small></span>
+                      <span><b>1</b><small>Followers</small></span>
+                      <span><b>0</b><small>Following</small></span>
+                    </div>
+                    <div class="profile-badges"><span>♧ Hunza Explorer</span><span>◇ Trekker</span><span>♢ Lake Hunter</span></div>
+                    <b class="profile-places-heading">Places I've been</b>
+                    <div class="profile-mini-map" id="profile-mini-map" role="img" aria-label="Map showing places visited in Pakistan"></div>
+                    <div class="profile-map-loading" id="profile-map-loading"></div>
+                    <div class="profile-tabs"><span class="profile-grid-tab">▦</span><span>▣</span></div>
+                    <div class="profile-empty">
+                      <span>▧</span>
+                      <b>No posts yet</b>
+                      <small>Share your first khoj with the community.</small>
+                      <span class="profile-add-post">Add post</span>
+                    </div>
+                    <div class="profile-bottom-nav">
+                      <span><i>⌂</i><small>Home</small></span>
+                      <span><i>⊙</i><small>Discover</small></span>
+                      <span class="profile-nav-add"><i>+</i></span>
+                      <span><i>◫</i><small>Map</small></span>
+                      <span class="profile-nav-active"><i>♙</i><small>Profile</small></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <span class="showcase-phone-glow"></span>
+          </div>
+          <div class="showcase-steps">
+            <article class="showcase-step is-active" data-preview-step="welcome">
+              <span class="step-number">01 / YOUR STARTING POINT</span>
+              <h3>Khush aamdeed.<br /><span>Your journey starts here.</span></h3>
+              <p>A warm welcome in the app, with a simple place to sign in or create your account.</p>
+            </article>
+            <article class="showcase-step" data-preview-step="explore">
+              <span class="step-number">02 / DISCOVER YOUR NEXT STOP</span>
+              <h3>Trending places.<br /><span>And hidden gems.</span></h3>
+              <p>Browse lakes, valleys, local favourites, and the quieter corners of Pakistan—all in one place.</p>
+            </article>
+            <article class="showcase-step" data-preview-step="new-post">
+              <span class="step-number">03 / SHARE A PLACE YOU LOVE</span>
+              <h3>Your discovery.<br /><span>Someone else’s next stop.</span></h3>
+              <p>Share a photo or reel, add the place and a few local tips, then publish your find for the Pakhoj community.</p>
+            </article>
+            <article class="showcase-step" data-preview-step="feed">
+              <span class="step-number">04 / A FEED THAT FOLLOWS YOUR JOURNEY</span>
+              <h3>Find your people.<br /><span>Start filling your feed.</span></h3>
+              <p>Discover travellers to follow and see their places, tips, and Pakistan adventures in your feed.</p>
+            </article>
+            <article class="showcase-step" data-preview-step="map">
+              <span class="step-number">05 / SEE WHERE IT TAKES YOU</span>
+              <h3>Follow the map.<br /><span>Take the scenic route.</span></h3>
+              <p>Get a feel for the places around you and start planning the next stop on your journey.</p>
+            </article>
+            <article class="showcase-step" data-preview-step="profile">
+              <span class="step-number">06 / YOUR PAKHOJ PROFILE</span>
+              <h3>Keep your journeys.<br /><span>Share your own khoj.</span></h3>
+              <p>Track places you have visited, collect your travel badges, and share your discoveries with the Pakhoj community.</p>
+              <a class="text-link" href="assets/pakhoj.apk" download="Pakhoj.apk">Download Pakhoj <span aria-hidden="true">↗</span></a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="discover-section content-section" id="discover">
+        <div class="section-kicker">MADE FOR THE CURIOUS</div>
+        <h2>More than a pin<br /><span>on a map.</span></h2>
+        <p class="section-intro">The best discoveries come from people who know a place by heart. Pakhoj brings their recommendations, stories, and local finds together in one app.</p>
+        <div class="feature-grid">
+          <article class="feature-card">
+            <span class="feature-number">01</span>
+            <span class="feature-icon" aria-hidden="true">⌖</span>
+            <h3>Find your next somewhere</h3>
+            <p>Discover quiet valleys, secret viewpoints, and local favourites all across Pakistan.</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-number">02</span>
+            <span class="feature-icon" aria-hidden="true">◉</span>
+            <h3>See it through local eyes</h3>
+            <p>Follow real explorers and get a feel for the place before you set off.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="stories-section content-section" id="stories">
+        <div class="story-image">
+          <img src="https://images.unsplash.com/photo-1597074866923-dc0589150358?auto=format&fit=crop&w=1300&q=85" alt="Mountain scenery in northern Pakistan" loading="lazy" />
+          <span class="image-label"><span class="live-dot"></span> YOUR NEXT STORY STARTS HERE</span>
+        </div>
+        <div class="story-copy">
+          <div class="section-kicker">THE JOURNEY IS PERSONAL</div>
+          <h2>Not just places.<br /><span>People, too.</span></h2>
+          <p>Follow local explorers, share your own finds, and make a travel list that feels like yours. Pakhoj is being built for people who want to experience Pakistan beyond the usual stops.</p>
+          <a class="text-link" href="assets/pakhoj.apk" download="Pakhoj.apk">Get Pakhoj for Android <span aria-hidden="true">↗</span></a>
+        </div>
+      </section>
+
+      <section class="about-section content-section" id="about">
+        <div class="about-mark"><img src="assets/pakhoj-logo.jpg" alt="Pakhoj logo" /></div>
+        <div class="section-kicker">BUILT WITH LOVE FOR PAKISTAN</div>
+        <h2>There’s always<br /><span>more to discover.</span></h2>
+        <p>Pakhoj’s purpose is to help people discover Pakistan’s hidden spots, peaceful valleys, beautiful lakes, and places worth exploring.</p>
+        <div class="developer-card">
+          <span class="developer-label">DEVELOPED BY</span>
+          <strong>Areeb Qadir</strong>
+          <span class="developer-location">Islamabad, Pakistan</span>
+        </div>
+        <a class="download-button download-button-small" href="assets/pakhoj.apk" download="Pakhoj.apk">
+          <span class="android-mark" aria-hidden="true">↓</span>
+          <span><small>ANDROID APP</small><strong>Download Pakhoj</strong></span>
+          <span class="button-arrow" aria-hidden="true">↗</span>
+        </a>
+        <div class="store-status"><span class="status-dot"></span> Play Store & App Store publishing is in progress</div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="#home">
+        <img src="assets/pakhoj-logo.jpg" alt="" />
+        <span>PAKHOJ</span>
+      </a>
+      <span class="footer-tagline">Find your Pakistan.</span>
+      <span class="copyright">© 2026 Pakhoj</span>
+    </footer>
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <script src="app.js"></script>
+  </body>
+</html>
